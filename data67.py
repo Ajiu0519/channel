@@ -1,6 +1,6 @@
 # 导入所需的库
 
-pip install plotly
+#pip install plotly
 pip install matplotlib
 pip install pandas
 pip install numpy
