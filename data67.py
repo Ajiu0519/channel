@@ -11,8 +11,8 @@ st.title('六七月数据报表')
 
 @st.cache
 def load_data():
-    DATA_FILENAME = Path(__file__).parent/'data/非标六七月汇总.xlsx'
-    data = pd.read_excel(DATA_FILENAME)
+    DATA_FILENAME = Path(__file__).parent/'data/非标六七月汇总.csv'
+    data = pd.read_csv(DATA_FILENAME)
     return data
 all_data = load_data()
 df = pd.DataFrame(all_data)
