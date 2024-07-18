@@ -80,6 +80,10 @@ columns = st.sidebar.radio('2.选择要查看的影响因素:', ['全部客户',
 #selected_column = st.selectbox('选择Y轴指标', columns, key=2)
 #st.set_option('deprecation.showPyplotGlobalUse', False) #
 
+#全局字体
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体  
+plt.rcParams['axes.unicode_minus'] = False  # 正确显示负号 
+
 def plot_chart(data, column):
     data.set_index('日期', inplace=True)  # 设置日期为索引
     plt.figure(figsize=(10, 6))
