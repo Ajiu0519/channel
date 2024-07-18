@@ -26,7 +26,7 @@ df = df.reset_index(drop=True)# 索引重排
 st.write("全部数据：")
 st.dataframe(df)
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 #根据不同的渠道做不同的表
 
 dataframes_hua = {}
