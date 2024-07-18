@@ -81,7 +81,7 @@ columns = st.sidebar.radio('2.选择要查看的影响因素:', ['全部客户',
 #st.set_option('deprecation.showPyplotGlobalUse', False) #
 
 #全局字体
-plt.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体  
+plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']  #  
 plt.rcParams['axes.unicode_minus'] = False  # 正确显示负号 
 
 def plot_chart(data, column):
@@ -118,7 +118,7 @@ if channel == '私域':
 # 添加滑块，后期可以选择日期
 from datetime import datetime
 start_time = st.slider(
-     "请选择开始时间",
+     "请选择开始时间（后期可以选日期）",
      value=datetime(2024, 1, 1, 9, 30),
      format="MM/DD/YY - hh:mm")
 st.write("开始时间:", start_time)
