@@ -109,7 +109,7 @@ if channel == 'SDK聚合':
 if channel == '私域':
     st.title('私域')
     plot_chart(dataframes_si, columns)
-
+'''
 # 添加滑块，后期可以选择日期
 from datetime import datetime
 start_time = st.slider(
@@ -117,3 +117,4 @@ start_time = st.slider(
      value=datetime(2024, 1, 1, 9, 30),
      format="MM/DD/YY - hh:mm")
 st.write("开始时间:", start_time)
+'''
