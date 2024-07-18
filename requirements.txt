@@ -4,3 +4,7 @@ numpy
 plotly
 matplotlib
 altair
+contourpy
+cycler
+fonttools
+pyparsing
