@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 # 导入所需的库
 import pandas as pd
 import numpy as np
