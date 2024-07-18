@@ -1,10 +1,10 @@
 # 导入所需的库
-import streamlit as st
 import pandas as pd
-import math
-from pathlib import Path
-pip install openpyxl
-import openpyxl
+import numpy as np
+import plotly.express as px
+import streamlit as st
+import matplotlib.pyplot as plt
+import altair as alt
 
 # 设置一个标题
 st.title('六七月数据报表')
