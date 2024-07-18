@@ -1,8 +1,7 @@
 # 导入所需的库
-pip install pyplot
 import pandas as pd
 import numpy as np
-import plotly.express as px
+#import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
 import altair as alt
