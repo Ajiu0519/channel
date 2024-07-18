@@ -11,7 +11,7 @@ st.title('六七月数据报表')
 
 @st.cache
 def load_data():
-    data = pd.read_excel("非标六七月汇总.xlsx")
+    data = pd.read_excel("/非标六七月汇总.xlsx")
     return data
 all_data = load_data()
 df = pd.DataFrame(all_data)
