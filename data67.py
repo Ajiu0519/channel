@@ -1,11 +1,16 @@
 # 导入所需的库
+
+pip install plotly
+pip install matplotlib
+pip install pandas
+pip install numpy
+
 import pandas as pd
 import numpy as np
-#import plotly.express as px
+import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
 import altair as alt
-from vega_datasets import data
 
 # 设置一个标题
 st.title('六七月数据报表')
