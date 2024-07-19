@@ -80,17 +80,13 @@ columns = st.sidebar.radio('2.选择要查看的影响因素:', ['全部客户',
 #selected_column = st.selectbox('选择Y轴指标', columns, key=2)
 #st.set_option('deprecation.showPyplotGlobalUse', False) #
 
-#全局字体
-plt.rcParams['font.sans-serif'] = ['Microsoft YaHei']  #  
-plt.rcParams['axes.unicode_minus'] = False  # 正确显示负号 
-
 def plot_chart(data, column):
     data.set_index('日期', inplace=True)  # 设置日期为索引
     plt.figure(figsize=(10, 6))
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
                  data[data['H5id'] == h5id][column], label=h5id)
-    plt.rcParams['font.sans-serif'] = ['Microsoft YaHei'] # 用来正常显示中文标签SimHei
+    plt.rcParams['font.sans-serif'] = ['Arial Unicode MS'] # 用来正常显示中文标签SimHei
     plt.rcParams['axes.unicode_minus'] = False # 用来正常显示负号
     plt.title(f'{column}')
     plt.xlabel('日期')
