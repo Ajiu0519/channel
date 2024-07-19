@@ -89,7 +89,7 @@ def plot_chart(data, column):
     plt.rcParams['font.sans-serif'] = ['Arial Unicode MS'] # 用来正常显示中文标签SimHei
     plt.rcParams['axes.unicode_minus'] = False # 用来正常显示负号
     plt.title(f'{column}')
-    plt.xlabel('日期')
+    plt.xlabel('Date')
     plt.ylabel(column)
     plt.legend()  # 显示图例
     plt.grid(True)  # 显示网格
