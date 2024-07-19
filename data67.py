@@ -86,7 +86,7 @@ def plot_chart(data, column):
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
                  data[data['H5id'] == h5id][column], label=h5id)
-    plt.rcParams['font.sans-serif'] = ['Arial Unicode MS'] # 用来正常显示中文标签SimHei
+    plt.rcParams['font.sans-serif'] = ['Arial'] # 用来正常显示中文标签SimHei
     plt.rcParams['axes.unicode_minus'] = False # 用来正常显示负号
     plt.title(f'{column}')
     plt.xlabel('Date')
