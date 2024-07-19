@@ -10,7 +10,7 @@ import altair as alt
 # 设置一个标题
 st.title('六七月数据报表')
 #@st.cache
-all_data = pd.read_csv('data/非标六七月-汇总.csv', encoding='utf-8')
+all_data = pd.read_csv('data/非标六七月汇总 (1).csv', encoding='utf-8')
 df = pd.DataFrame(all_data)
 df = df.drop('偷子', axis=1) #由于偷子列暂时没有数据，所以先删除掉
 
@@ -20,9 +20,8 @@ df.isna()
 df = df.fillna(method='pad')
 df = df.drop('ROI', axis=1)
 df = df.drop('结算cac', axis=1)
-df = df.drop(df.index[[13, 77]])  # 把两行没有接量的私域行删除了
 
-df = df.reset_index(drop=True)# 索引重排
+#df = df.reset_index(drop=True)# 索引重排
 # 显示数据表
 st.write("全部数据：")
 st.dataframe(df)
