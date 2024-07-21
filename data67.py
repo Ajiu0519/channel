@@ -12,7 +12,7 @@ st.title('六七月数据报表')
 
 @st.cache
 def load_data():
-    data = pd.read_csv("/data//非标六七月汇总 (1).csv", encoding = 'utf-8')
+    data = pd.read_csv("/data/非标六七月汇总 (1).csv", encoding = 'utf-8')
     return data
 all_data = load_data()
 df = pd.DataFrame(all_data)
