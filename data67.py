@@ -7,12 +7,14 @@ import matplotlib.pyplot as plt
 import altair as alt
 #from vega_datasets import data
 
-from matplotlib.font_manager import FontProperties  
-plt.font_manager.fontManager.addfont('data/SimHei.ttf') #临时注册新的全局字体
+from matplotlib.font_manager import FontProperties, fontManager
+fontManager.addfont('data/SimHei.ttf')
+#plt.font_manager.fontManager.addfont('data/SimHei.ttf') #临时注册新的全局字体
+font = FontProperties(fname='data/SimHei.ttf')  
+plt.title('中文标题', fontproperties=font)  
 plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False#用来正常显示负号
-plt.plot([1, 2, 3], [4, 3, 2])  
-plt.title('中文标题')  
+plt.plot([1, 2, 3], [4, 3, 2])    
 plt.xlabel('x轴')  
 plt.ylabel('y轴')  
 st.pyplot(plt)
