@@ -9,7 +9,7 @@ import altair as alt
 
 from matplotlib.font_manager import FontProperties  
 # 假设 ARIAL.TTF 位于与脚本相同的目录下  
-font_path = '.github/ARIAL.TTF'  
+font_path = 'data/MICROSS.TTF'  
 font_prop = FontProperties(fname=font_path)  
 
 plt.plot([1, 2, 3], [4, 3, 2])  
