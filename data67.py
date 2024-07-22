@@ -12,13 +12,8 @@ from matplotlib.font_manager import FontProperties
 font = FontProperties(fname='data/SimHei.ttf')  
 plt.title('中文标题', fontproperties=font)  
 #plt.font_manager.fontManager.addfont('data/SimHei.ttf') #临时注册新的全局字体
-plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
-plt.rcParams['axes.unicode_minus']=False#用来正常显示负号
-plt.plot([1, 2, 3], [4, 3, 2])    
-plt.xlabel('x轴')  
-plt.ylabel('y轴')  
-st.pyplot(plt)
-
+plt.rcParams['font.family'] = 'sans-serif'  
+plt.rcParams['font.sans-serif'] = ['SimHei']
 
 # 设置一个标题
 st.title('六七月数据报表')
@@ -99,7 +94,7 @@ def plot_chart(data, column):
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
                  data[data['H5id'] == h5id][column], label=h5id)
-    plt.rcParams["font.family"] = ["MICROSS"]
+    plt.rcParams["font.family"] = ["sans-serif"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     #plt.title(f'{column}')
     plt.xlabel('data')
@@ -150,7 +145,7 @@ if not summary_df.empty:
         print(channel_data)
         plt.plot(channel_data['日期'], channel_data[selected_metric], label=channel, marker='o', linestyle='-')
     #plt.title(f'{selected_metric}')
-    plt.rcParams["font.family"] = ["MICROSS"]
+    plt.rcParams["font.family"] = ["sans-serif"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     plt.xlabel('data')
     #plt.ylabel(f'{selected_metric}')
