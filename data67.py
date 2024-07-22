@@ -7,6 +7,20 @@ import matplotlib.pyplot as plt
 import altair as alt
 #from vega_datasets import data
 
+# 假设你的字体文件位于 'fonts/YourFont.woff'  
+custom_css = """  
+@font-face {  
+    font-family: 'MICROSS';  
+    src: url('.github/MICROSS.woff') format('woff');  
+}  
+body {  
+    font-family: 'MICROSS', sans-serif;  
+}  
+"""  
+# 使用 st.markdown 或 st.write 来应用 CSS  
+st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
+
+
 # 设置一个标题
 st.title('六七月数据报表')
 
@@ -86,7 +100,7 @@ def plot_chart(data, column):
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
                  data[data['H5id'] == h5id][column], label=h5id)
-    plt.rcParams["font.family"] = ["sans-serif"]
+    plt.rcParams["font.family"] = ["MICROSS"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     #plt.title(f'{column}')
     plt.xlabel('data')
@@ -137,7 +151,7 @@ if not summary_df.empty:
         print(channel_data)
         plt.plot(channel_data['日期'], channel_data[selected_metric], label=channel, marker='o', linestyle='-')
     #plt.title(f'{selected_metric}')
-    plt.rcParams["font.family"] = ["sans-serif"]
+    plt.rcParams["font.family"] = ["MICROSS"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     plt.xlabel('data')
     #plt.ylabel(f'{selected_metric}')
