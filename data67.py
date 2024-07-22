@@ -93,7 +93,7 @@ def plot_chart(data, column):
     plt.figure(figsize=(10, 6))
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
-                 data[data['H5id'] == h5id][column], label=h5id)
+                 data[data['H5id'] == h5id][column], label=h5id, fontproperties=font)
     plt.rcParams['font.family'] = 'sans-serif'  
     plt.rcParams['font.sans-serif'] = ['SimHei']
     #plt.title(f'{column}')
@@ -143,7 +143,7 @@ if not summary_df.empty:
         plt.ylim(0, 1)
     for channel, channel_data in summary_df.groupby('渠道'):
         print(channel_data)
-        plt.plot(channel_data['日期'], channel_data[selected_metric], label=channel, marker='o', linestyle='-')
+        plt.plot(channel_data['日期'], channel_data[selected_metric], label=channel, marker='o', linestyle='-',fontproperties=font)
     #plt.title(f'{selected_metric}')
     plt.rcParams['font.family'] = 'sans-serif'  
     plt.rcParams['font.sans-serif'] = ['SimHei']
