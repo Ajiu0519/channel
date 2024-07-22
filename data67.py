@@ -78,7 +78,7 @@ st.dataframe(dataframes_si)
 
 # 设置侧边栏     Tips:所有侧边栏的元素都必须在前面加上 sidebar，不然会在主页显示
 st.sidebar.expander('')  # expander必须接受一个 label参数，我这里留了一个空白
-st.sidebar.subheader('在下方选择')  # 副标题
+st.sidebar.subheader('同渠道不同id各个变量比对')  # 副标题
 # st.selectbox:创造一个下拉选择框的单选题，接收参数: (题目名称， 题目选项)
 channel = st.sidebar.selectbox('1.选择渠道:', ['花骡直播', 'TMK短信', 'SDK聚合', '私域',])
 columns = st.sidebar.radio('2.选择要查看的影响因素:', ['全部客户', '加微率', '导学课到课率', '导学课完课率', '正价转化率'])
@@ -134,10 +134,10 @@ start_time = st.slider(
 st.write("开始时间:", start_time)
 
 # 新建板块
-st.sidebar.subheader('在下方选择板块')  # 副标题
+st.sidebar.subheader('同变量不同渠道数据比对')  # 副标题
 # st.selectbox:创造一个下拉选择框的单选题，接收参数: (题目名称， 题目选项)
 #channel = st.sidebar.selectbox('1.选择影响因素:', ['花骡直播', 'TMK短信', 'SDK聚合', '私域',])
-selected_metric = st.sidebar.radio('1.选择要查看的影响因素:', ['全部客户', '加微率', '导学课到课率', '导学课完课率', '正价转化率'])
+selected_metric = st.sidebar.radio('选择要查看的影响因素:', ['全部客户', '加微率', '导学课到课率', '导学课完课率', '正价转化率'])
 
 st.title('按渠道对比')
 summary_df = df[df['H5id'] == '汇总']
