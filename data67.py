@@ -11,8 +11,8 @@ from vega_datasets import data
 st.title('六七月数据报表')
 
 @st.cache
-all_data = pd.read_csv("data/非标六七月汇总 (2).csv")
-df = pd.DataFrame(all_data)
+df = pd.read_csv("data/非标六七月汇总 (2).csv", encoding='utf-8')
+#df = pd.DataFrame(all_data)
 df = df.drop('偷子', axis=1) #由于偷子列暂时没有数据，所以先删除掉
 
 df.head(20)
