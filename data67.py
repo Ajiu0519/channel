@@ -93,7 +93,7 @@ def plot_chart(data, column):
     plt.figure(figsize=(10, 6))
     if column == '全部客户':
         plt.ylim(0, 500)  # 确保y轴从0开始并包含整个数据范围
-    if column == '加微率' or selected_metric == '导学课到课率' or selected_metric == '导学课完课率':
+    if column == '加微率' or  column == '导学课到课率' or column == '导学课完课率':
         plt.ylim(0, 1)
     if column == '正价转化率':
         plt.ylim(0, 0.4)
