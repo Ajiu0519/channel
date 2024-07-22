@@ -152,7 +152,7 @@ if not summary_df.empty:
     plt.grid(True)
     plt.xticks(rotation=45)
     
-    font1 = {'family' : 'SimHei',
+    font1 = {'family' : 'sans-serif',
     'weight' : 'normal',
     'size'   : 23,
     }
