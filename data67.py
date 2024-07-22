@@ -14,7 +14,7 @@ custom_css = """
     src: url('.github/Arial.woff') format('woff');  
 }  
 body {  
-    font-family: 'MICROSS', sans-serif;  
+    font-family: 'Arial', Arial;  
 }  
 """  
 # 使用 st.markdown 或 st.write 来应用 CSS  
