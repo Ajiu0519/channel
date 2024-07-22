@@ -93,7 +93,7 @@ def plot_chart(data, column):
     plt.figure(figsize=(10, 6))
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
-                 data[data['H5id'] == h5id][column], label=h5id)
+                 data[data['H5id'] == h5id][column], label=h5id, marker='o', linestyle='-')
     plt.rcParams['font.family'] = 'sans-serif'  
     plt.rcParams['font.sans-serif'] = ['SimHei']
     #plt.title(f'{column}')
