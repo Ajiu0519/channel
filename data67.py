@@ -151,7 +151,12 @@ if not summary_df.empty:
     plt.ylabel(f'{selected_metric}',fontproperties=font)
     plt.grid(True)
     plt.xticks(rotation=45)
-    plt.legend(fontproperties=font)
+    
+    font1 = {'family' : 'SimHei',
+    'weight' : 'normal',
+    'size'   : 23,
+    }
+    plt.legend(prop=font1)
     plt.tight_layout()
     st.pyplot()
 else:
