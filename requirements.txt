@@ -8,3 +8,4 @@ contourpy
 cycler
 fonttools
 pyparsing
+vega_datasets
