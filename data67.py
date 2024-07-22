@@ -143,8 +143,7 @@ if not summary_df.empty:
         plt.ylim(0, 1)
     for channel, channel_data in summary_df.groupby('渠道'):
         print(channel_data)
-        plt.plot(channel_data['日期'], channel_data[selected_metric], marker='o', linestyle='-')
-    plt.label(channel,fontproperties=font)
+        plt.plot(channel_data['日期'], channel_data[selected_metric], label = channel, marker='o', linestyle='-')
     #plt.title(f'{selected_metric}')
     plt.rcParams['font.family'] = 'sans-serif'  
     plt.rcParams['font.sans-serif'] = ['SimHei']
@@ -152,7 +151,7 @@ if not summary_df.empty:
     plt.ylabel(f'{selected_metric}',fontproperties=font)
     plt.grid(True)
     plt.xticks(rotation=45)
-    plt.legend()
+    plt.legend(fontproperties=font)
     plt.tight_layout()
     st.pyplot()
 else:
