@@ -96,7 +96,7 @@ def plot_chart(data, column):
     if column == '加微率' or  column == '导学课到课率' or column == '导学课完课率':
         plt.ylim(0, 1)
     if column == '正价转化率':
-        plt.ylim(0, 0.4)
+        plt.ylim(0, 0.2)
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
                  data[data['H5id'] == h5id][column], label=h5id, marker='o', linestyle='-')
