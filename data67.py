@@ -8,14 +8,13 @@ import altair as alt
 #from vega_datasets import data
 
 from matplotlib.font_manager import FontProperties  
-# 假设 ARIAL.TTF 位于与脚本相同的目录下  
-font_path = 'data/MICROSS.TTF'  
-font_prop = FontProperties(fname=font_path)  
-
+mpl.font_manager.fontManager.addfont('data/SimHei.ttf') #临时注册新的全局字体
+plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
+plt.rcParams['axes.unicode_minus']=False#用来正常显示负号
 plt.plot([1, 2, 3], [4, 3, 2])  
-plt.title('中文标题', fontproperties=font_prop)  
-plt.xlabel('x轴', fontproperties=font_prop)  
-plt.ylabel('y轴', fontproperties=font_prop)  
+plt.title('中文标题')  
+plt.xlabel('x轴')  
+plt.ylabel('y轴')  
 st.pyplot(plt)
 
 
