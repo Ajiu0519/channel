@@ -99,7 +99,7 @@ def plot_chart(data, column):
     #plt.title(f'{column}')
     plt.xlabel('data')
     plt.ylabel(column,fontproperties=font)
-    plt.legend()  # 显示图例
+    plt.legend(prop=font)  # 显示图例
     plt.grid(True)  # 显示网格
     plt.xticks(rotation=45)
     plt.tight_layout()
