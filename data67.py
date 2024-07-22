@@ -10,7 +10,6 @@ import altair as alt
 # 设置一个标题
 st.title('六七月数据报表')
 
-@st.cache
 data = pd.read_csv("非标六七月汇总 (3).csv", encoding='utf-8')
 df = pd.DataFrame(data)
 df = df.drop('偷子', axis=1) #由于偷子列暂时没有数据，所以先删除掉
