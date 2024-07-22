@@ -5,7 +5,7 @@ import plotly.express as px
 import streamlit as st
 import matplotlib.pyplot as plt
 import altair as alt
-from vega_datasets import data
+#from vega_datasets import data
 
 # 设置一个标题
 st.title('六七月数据报表')
