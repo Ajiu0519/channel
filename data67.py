@@ -10,11 +10,11 @@ import altair as alt
 # 假设你的字体文件位于 'fonts/YourFont.woff'  
 custom_css = """  
 @font-face {  
-    font-family: 'Arial';  
-    src: url('.github/Arial.woff') format('woff');  
+    font-family: 'ARIAL';  
+    src: url('.github/ARIAL.TTF') format('TTF');  
 }  
 body {  
-    font-family: 'Arial', Arial;  
+    font-family: 'ARIAL', ARIAL;  
 }  
 """  
 # 使用 st.markdown 或 st.write 来应用 CSS  
@@ -100,7 +100,7 @@ def plot_chart(data, column):
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
                  data[data['H5id'] == h5id][column], label=h5id)
-    plt.rcParams["font.family"] = ["Arial"]
+    plt.rcParams["font.family"] = ["ARIAL"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     #plt.title(f'{column}')
     plt.xlabel('data')
@@ -151,7 +151,7 @@ if not summary_df.empty:
         print(channel_data)
         plt.plot(channel_data['日期'], channel_data[selected_metric], label=channel, marker='o', linestyle='-')
     #plt.title(f'{selected_metric}')
-    plt.rcParams["font.family"] = ["Arial"]
+    plt.rcParams["font.family"] = ["ARIAL"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     plt.xlabel('data')
     #plt.ylabel(f'{selected_metric}')
@@ -174,6 +174,12 @@ if selected_metric == '全部客户':
 if selected_metric == '加微率':
     st.markdown('整体趋势：  \n在六月到七月期间，加微率呈波动不明显， 其中“花骡直播”的总体加微情况要优于其他渠道，而且加微率较为稳定， \n私域的加微率总体较低，可能由于私域渠道由于其大多数客户都已经被锁定，导致新增较慢的情况。'
             )
-if selected_metric == '导学到课率':
-    st.markdown('整体趋势：  \n在六月到七月期间，导学到课率率除了“SDK聚合”以外其他渠道都较为稳定， 其中“花骡直播”的总体到课情况较好，“私域”的到课情况整体低于其他渠道'
+if selected_metric == '导学课到课率':
+    st.markdown('整体趋势：  \n在六月到七月期间，导学到课率除了“SDK聚合”以外其他渠道都较为稳定， 其中“花骡直播”的总体到课情况较好，“私域”的到课情况整体低于其他渠道'
+            )
+if selected_metric == '导学课完课率':
+    st.markdown('整体趋势：  \n导学完课率除了“SDK聚合”以外其他渠道都较为稳定， 其中“花骡直播”和TMK短信的总体完课率总体情况较稳定，“私域”的完课情况较为稳定'
+            )
+if selected_metric == '正价转化率':
+    st.markdown('整体趋势：  \n“花骡直播”的转化率较为突出，能稳定在1%以上，其他渠道转化率都有提高空间'
             )
