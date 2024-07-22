@@ -10,8 +10,8 @@ import altair as alt
 # 假设你的字体文件位于 'fonts/YourFont.woff'  
 custom_css = """  
 @font-face {  
-    font-family: 'MICROSS';  
-    src: url('.github/MICROSS.woff') format('woff');  
+    font-family: 'Arial';  
+    src: url('.github/Arial.woff') format('woff');  
 }  
 body {  
     font-family: 'MICROSS', sans-serif;  
@@ -100,7 +100,7 @@ def plot_chart(data, column):
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
                  data[data['H5id'] == h5id][column], label=h5id)
-    plt.rcParams["font.family"] = ["MICROSS"]
+    plt.rcParams["font.family"] = ["Arial"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     #plt.title(f'{column}')
     plt.xlabel('data')
@@ -151,7 +151,7 @@ if not summary_df.empty:
         print(channel_data)
         plt.plot(channel_data['日期'], channel_data[selected_metric], label=channel, marker='o', linestyle='-')
     #plt.title(f'{selected_metric}')
-    plt.rcParams["font.family"] = ["MICROSS"]
+    plt.rcParams["font.family"] = ["Arial"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
     plt.xlabel('data')
     #plt.ylabel(f'{selected_metric}')
