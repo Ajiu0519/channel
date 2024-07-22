@@ -148,7 +148,7 @@ if not summary_df.empty:
     if selected_metric == '加微率' or selected_metric == '导学课到课率' or selected_metric == '导学课完课率':
         plt.ylim(0, 1)
     if selected_metric == '正价转化率':
-        plt.ylim(0, 0.4)
+        plt.ylim(0, 0.12)
     for channel, channel_data in summary_df.groupby('渠道'):
         print(channel_data)
         plt.plot(channel_data['日期'], channel_data[selected_metric], label = channel, marker='o', linestyle='-')
