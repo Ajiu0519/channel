@@ -88,9 +88,9 @@ def plot_chart(data, column):
                  data[data['H5id'] == h5id][column], label=h5id)
     plt.rcParams["font.family"] = ["sans-serif"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
-    plt.title(f'{column}')
-    plt.xlabel('日期')
-    plt.ylabel(column)
+    #plt.title(f'{column}')
+    plt.xlabel('data')
+    #plt.ylabel(column)
     plt.legend()  # 显示图例
     plt.grid(True)  # 显示网格
     plt.xticks(rotation=45)
@@ -136,11 +136,11 @@ if not summary_df.empty:
     for channel, channel_data in summary_df.groupby('渠道'):
         print(channel_data)
         plt.plot(channel_data['日期'], channel_data[selected_metric], label=channel, marker='o', linestyle='-')
-    plt.title(f'{selected_metric}')
+    #plt.title(f'{selected_metric}')
     plt.rcParams["font.family"] = ["sans-serif"]
     plt.rcParams["font.sans-serif"] = ['SimHei']
-    plt.xlabel('日期')
-    plt.ylabel(f'{selected_metric}')
+    plt.xlabel('data')
+    #plt.ylabel(f'{selected_metric}')
     plt.grid(True)
     plt.xticks(rotation=45)
     plt.legend()
