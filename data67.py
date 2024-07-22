@@ -8,7 +8,7 @@ import altair as alt
 #from vega_datasets import data
 
 from matplotlib.font_manager import FontProperties  
-mpl.font_manager.fontManager.addfont('data/SimHei.ttf') #临时注册新的全局字体
+plt.font_manager.fontManager.addfont('data/SimHei.ttf') #临时注册新的全局字体
 plt.rcParams['font.sans-serif']=['SimHei'] #用来正常显示中文标签
 plt.rcParams['axes.unicode_minus']=False#用来正常显示负号
 plt.plot([1, 2, 3], [4, 3, 2])  
