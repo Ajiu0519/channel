@@ -7,18 +7,16 @@ import matplotlib.pyplot as plt
 import altair as alt
 #from vega_datasets import data
 
-# 假设你的字体文件位于 'fonts/YourFont.woff'  
-custom_css = """  
-@font-face {  
-    font-family: 'ARIAL';  
-    src: url('.github/ARIAL.TTF') format('TTF');  
-}  
-body {  
-    font-family: 'ARIAL', ARIAL;  
-}  
-"""  
-# 使用 st.markdown 或 st.write 来应用 CSS  
-st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
+from matplotlib.font_manager import FontProperties  
+# 假设 ARIAL.TTF 位于与脚本相同的目录下  
+font_path = '.github/ARIAL.TTF'  
+font_prop = FontProperties(fname=font_path)  
+
+plt.plot([1, 2, 3], [4, 3, 2])  
+plt.title('中文标题', fontproperties=font_prop)  
+plt.xlabel('x轴', fontproperties=font_prop)  
+plt.ylabel('y轴', fontproperties=font_prop)  
+st.pyplot(plt)
 
 
 # 设置一个标题
