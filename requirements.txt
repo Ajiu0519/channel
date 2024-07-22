@@ -9,4 +9,3 @@ cycler
 fonttools
 pyparsing
 vega_datasets
-font_manager
