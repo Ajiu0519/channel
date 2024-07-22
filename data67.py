@@ -91,11 +91,11 @@ columns = st.sidebar.radio('2.选择要查看的影响因素:', ['全部客户',
 def plot_chart(data, column):
     data.set_index('日期', inplace=True)  # 设置日期为索引
     plt.figure(figsize=(10, 6))
-    if selected_column == '全部客户':
+    if column == '全部客户':
         plt.ylim(0, 500)  # 确保y轴从0开始并包含整个数据范围
-    if selected_column == '加微率' or selected_metric == '导学课到课率' or selected_metric == '导学课完课率':
+    if column == '加微率' or selected_metric == '导学课到课率' or selected_metric == '导学课完课率':
         plt.ylim(0, 1)
-    if selected_column == '正价转化率':
+    if column == '正价转化率':
         plt.ylim(0, 0.4)
     for h5id in data['H5id'].unique():
         plt.plot(data[data['H5id'] == h5id].index,
