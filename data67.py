@@ -151,10 +151,10 @@ if not summary_df.empty:
         plt.ylim(0, 0.12)
     for channel, channel_data in summary_df.groupby('渠道'):
         print(channel_data)
-        if channel == 'TMk短信' or channel == 'SDK聚合' or channel == '私域':
-            plt.plot(channel_data['日期'], channel_data[selected_metric], label = channel, marker='o', linestyle='-', alpha = 0)
-        if channel == '花骡直播':
-            plt.plot(channel_data['日期'], channel_data[selected_metric], label = channel, marker='o', linestyle='-', alpha = 1)
+        #if channel == 'TMk短信' or channel == 'SDK聚合' or channel == '私域':
+           # plt.plot(channel_data['日期'], channel_data[selected_metric], label = channel, marker='o', linestyle='-', alpha = 0)
+       # if channel == '花骡直播':
+        plt.plot(channel_data['日期'], channel_data[selected_metric], label = channel, marker='o', linestyle='-', alpha = 1)
     #plt.title(f'{selected_metric}')
     plt.rcParams['font.family'] = 'sans-serif'  
     plt.rcParams['font.sans-serif'] = ['SimHei']
