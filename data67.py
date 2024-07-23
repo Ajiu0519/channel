@@ -103,7 +103,7 @@ def plot_chart(data, column):
     plt.rcParams['font.family'] = 'sans-serif'  
     plt.rcParams['font.sans-serif'] = ['SimHei']
     #plt.title(f'{column}')
-    plt.xlabel('日期')
+    plt.xlabel('日期',fontproperties=font)
     plt.ylabel(column,fontproperties=font)
     plt.legend(prop=font)  # 显示图例
     plt.grid(True)  # 显示网格
@@ -155,7 +155,7 @@ if not summary_df.empty:
     #plt.title(f'{selected_metric}')
     plt.rcParams['font.family'] = 'sans-serif'  
     plt.rcParams['font.sans-serif'] = ['SimHei']
-    plt.xlabel('日期')
+    plt.xlabel('日期',fontproperties=font)
     plt.ylabel(f'{selected_metric}',fontproperties=font)
     plt.grid(True)
     plt.xticks(rotation=45)
