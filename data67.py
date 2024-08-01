@@ -36,7 +36,7 @@ st.write("全部数据：")
 st.dataframe(df)
 
 #根据不同的渠道做不同的表
-st.set_option('deprecation.showPyplotGlobalUse', False)
+#st.set_option('deprecation.showPyplotGlobalUse', False)
 dataframes_hua = {}
 dataframes_TMK = {}
 dataframes_SDK = {}
