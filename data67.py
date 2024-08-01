@@ -16,9 +16,9 @@ plt.rcParams['font.family'] = 'sans-serif'
 plt.rcParams['font.sans-serif'] = ['SimHei']
 
 # 设置一个标题
-st.title('6.1-7.21非标渠道数据汇总')
+st.title('6、7月非标渠道数据汇总')
 
-data = pd.read_csv("data/非标6.1-7.21汇总.csv", encoding='utf-8')
+data = pd.read_csv("data/非标六七月汇总.csv", encoding='utf-8')
 df = pd.DataFrame(data)
 df = df.drop('偷子', axis=1) #由于偷子列暂时没有数据，所以先删除掉
 
