@@ -1,4 +1,8 @@
 # 导入所需的库
+
+pip install plotly
+pip install matplotlib
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
